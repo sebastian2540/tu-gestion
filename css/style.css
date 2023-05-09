@@ -17,7 +17,7 @@ body {
     background-position: center center;
 }
 
-#titulo_principal {
+.titulo_principal {
     color: #FFFFFF;
     font-size: 160px;
     font-weight: bold;
@@ -25,6 +25,11 @@ body {
     font-family: 'Ubuntu Condensed', sans-serif;
 }
 
-#float-end img{
-    margin-top: 15px;
+.float-end {
+    margin: 50px 0px 0px 0px;
+}
+
+.float-end img {
+   width: 95px;
+   height: 95px;
 }
