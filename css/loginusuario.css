@@ -1,0 +1,94 @@
+:root {
+    --azul:#134074;
+    --azuloscuro:#0b2545;
+    --azulGris:#8DA9C4;
+    --blanco:#fff;
+    --fuente:'Quicksand', sans-serif;
+}
+.Bienvenido {
+    font-size: 200px;
+    color: #f5e8e8;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../imagenes/image.png) no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+}
+ 
+.Usuario{
+    width: 1020px;
+    height: 720px;
+    background: #71737d75;
+    color: #fff;
+    top: 60%;
+    left: 50%;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.Usuario .avatar{
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 50px;
+    left: calc(-50% - 60px);
+}
+.Usuario h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 62px;
+}
+.input label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+
+}
+.Usuario input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.Usuario input[type="text"],
+.Usuario input[type=password]{
+    border: nome;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+height: 40px;
+color: #fff;
+font-size: 16px;
+}
+.Usuario input[type="sumit"]{
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1f8beaba;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color .3s ease-in-out ;
+}
+
+
+.Usuario a{
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 30px;
+    color: rgb(16, 15, 15);
+}
+.Usuario a:hover{
+    color: #f7f7f8;
+}
+.cursor[type="submit"]:hover{
+    cursor: pointer;
+    background-color: var(--azul);
+}
