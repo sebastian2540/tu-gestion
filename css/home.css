@@ -1,0 +1,37 @@
+
+body{
+    margin: 0;
+}
+
+.container{
+    	width: 100%;
+        position: fixed;    
+}
+
+.container img{
+    width: 100%;
+    height: 120px;
+}
+
+.float-end {
+    margin: 20px 20px 0px 0px;
+}
+
+.float-end img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10%;
+    right: 0;
+ }
+
+ .iconoPage{
+    /* margin: all;
+    width:20%;
+    height: 130px;
+    float: left;
+    margin-right: 50px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
