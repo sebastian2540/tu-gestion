@@ -1,0 +1,16 @@
+.btnNuevoRegistro{
+    background-color: #D35400;
+    position: absolute;
+    left: 10%;
+    border-radius: 5px;
+}
+
+.tableNuevosRegistros{
+    position:absolute;
+    top: 40%;
+    left: 10%;
+}
+
+th{
+    border-color: black;
+}
