@@ -15,7 +15,7 @@
     height: 18px;
 }
 
-.tableNuevosRegistros{
+.tablaNuevosRegistros{
     position:absolute;
     top: 40%;
     left: 10%;
@@ -45,6 +45,4 @@ tr:nth-child(even) {
 
 .campoNuevoUsuario{
     border-radius: 5px;
-
 }
-
