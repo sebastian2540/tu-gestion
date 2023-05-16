@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400&display=swap');
 :root {
     --azul:#134074;
     --azuloscuro:#0b2545;
@@ -10,7 +10,7 @@
 text-align: center;
     font-size: 180px;
     color: #f5e8e8;
-    font-family: 'Architects Daughter';
+   font-family: 'Architects Daughter', sans-serif;
 
 }
 
@@ -23,24 +23,40 @@ body{
 }
  
 .Usuario{
-    width: 1020px;
-    height: 720px;
-    background: #71737d75;
-    color: #fff;
+    width: 600px;
+    height: 620px;
+    background: #cbcede75;
+    color: #f5ecec;
     top: 60%;
-    left: 50%;
+    left: 60%;
     position:absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(0%,-50%);
     box-sizing: border-box;
     padding: 70px 30px;
-    border-radius: 30px;
+   border-bottom-right-radius: 30px;
+   border-top-right-radius: 30px;
+
+}
+.usuariologo{
+    width: 600px;
+    height: 620px;
+    background: #cbcede75;
+    color: #f5ecec;
+    top: 60%;
+    left: 60px;
+    position: absolute;
+    transform: translate(100%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
 }
 .Usuario .avatar{
     height: 500px;
     width: 500px;
     position: absolute;
     top: 50px;
-    left: calc(-50% - 60px);
+    left: calc(-100% - 50px);
 }
 .Usuario h1{
     margin: 0;
