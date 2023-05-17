@@ -65,7 +65,7 @@
 <!-- Modal Nuevo Registro-->
 <div class="modal fade" id="NuevoUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
   style="font-family: 'Ubuntu Condensed', sans-serif; color: black;">
-  <div class="modal-dialog" style="max-width: 1000px;">
+  <div class="modal-dialog" style="max-width: 100%;">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-person-fill-add"></i><b> Nuevo Registro</b>
@@ -75,70 +75,90 @@
       <div class="modal-body">
 
         <form>
-          <label><i class="bi bi-person-vcard"></i><b> Identificación *</b></label> <br>
-          <input class="campoNuevoUsuario" type="text" id="identificacion"> <br>
+          <div class="container">
+            <div class="row">
+              <!--Columna 1-->
+              <div class="col-md-2">
+                <label><i class="bi bi-person-vcard"></i><b> Identificación *</b></label> 
+                <input class="campoNuevoUsuario" type="text" id="identificacion"> <br><br>
 
-          <label><i class="bi bi-person-badge"></i><b> Nombre</b></label> <br>
-          <input class="campoNuevoUsuario" type="text" id="nombre"> <br>
+                <label><i class="bi bi-envelope-at"></i><b> Correo Electrónico</b></label>
+                <input class="campoNuevoUsuario" type="email" id="correo_electronico"> <br><br>
 
-          <label><i class="bi bi-person-badge"></i><b> Apellido</b></label> <br>
-          <input class="campoNuevoUsuario" type="text" id="apellido"> <br>
+                <label><i class="bi bi-lock"></i><b> Contraseña</b></label>
+                <input class="campoNuevoUsuario" type="password" id="contrasena"> <br><br>
+              </div>
 
-          <label><i class="bi bi-telephone-plus"></i><b> Teléfono</b></label> <br>
-          <input class="campoNuevoUsuario" type="text" id="telefono"> <br>
+              <!--Columna 2-->
+              <div class="col-md-2">
+                <label><i class="bi bi-person-badge"></i><b> Nombre</b></label>
+                <input class="campoNuevoUsuario" type="text" id="nombre"> <br><br>
 
-          <label><i class="bi bi-envelope-at"></i><b> Correo Electrónico</b></label> <br>
-          <input class="campoNuevoUsuario" type="email" id="correo_electronico"> <br>
+                <label><i class="bi bi-pin-map"></i><b> Ciudad</b></label>
+                <input class="campoNuevoUsuario" type="text" id="ciudad"> <br><br>
 
-          <label><i class="bi bi-pin-map"></i><b> Ciudad</b></label> <br>
-          <input class="campoNuevoUsuario" type="text" id="ciudad"> <br>
+                <label><i class="bi bi-calendar3"></i><b> Fecha Creación</b></label>
+                <input class="campoNuevoUsuario" type="date" id="fech_creacion"> <br><br>
+              </div>
 
-          <label><i class="bi bi-building-add"></i><b> Dirección</b></label> <br>
-          <input class="campoNuevoUsuario" type="text" id="direccion"> <br>
+              <!--Columna 3-->
+              <div class="col-md-2">
+                <label><i class="bi bi-person-badge"></i><b> Apellido</b></label>
+                <input class="campoNuevoUsuario" type="text" id="apellido"> <br><br>
 
-          <label><i class="bi bi-calendar3"></i><b> Fecha nacimiento</b></label> <br>
-          <input class="campoNuevoUsuario" type="date" id="fecha_nacimiento"> <br>
+                <label><i class="bi bi-building-add"></i><b> Dirección</b></label>
+                <input class="campoNuevoUsuario" type="text" id="direccion"> <br><br>
+              </div>
 
-          <label><i class="bi bi-lock"></i><b> Contraseña</b></label> <br>
-          <input class="campoNuevoUsuario" type="password" id="contrasena"> <br>
+              <!--Columna 4-->
+              <div class="col-md-2">
+                <label><i class="bi bi-telephone-plus"></i><b> Teléfono</b></label>
+                <input class="campoNuevoUsuario" type="text" id="telefono"> <br><br>
 
-          <label><i class="bi bi-calendar3"></i><b> Contraseña</b></label> <br>
-          <input class="campoNuevoUsuario" type="date" id="fech_creacion"> <br><br>
+                <label><i class="bi bi-calendar3"></i><b> Fecha nacimiento</b></label>
+                <input class="campoNuevoUsuario" type="date" id="fecha_nacimiento"> <br><br>
+              </div>
 
-          <table style="width: 200px; height: 200px;">
-            <td style="text-align: center; background: #D9D9D9;">
-              <i class="bi bi-person-bounding-box"><br> 
-                Foto Usuario</i>
-            </td>
-          </table> <br>
+              <!--Columna 5-->
+              <div class="col-md-2" >
+                <table style="width: 180px; height: 180px; margin-left: 10px;">
+                  <td style="text-align: center; background: #D9D9D9;">
+                    <i class="bi bi-person-bounding-box"><br>
+                      Foto Usuario</i>
+                  </td>
+                </table> <br>
 
-          <div class="input-group mb-3"> <br>
-            <input type="file" class="form-control" id="inputGroupFile02">
-            <label class="input-group-text" for="inputGroupFile02"><i class="bi bi-folder-symlink"></i>Subir</label>
+                <div class="input-group mb-3" style="width: 200px;">
+                  <input type="file" class="form-control" id="inputGroupFile02">
+                  <label class="input-group-text" for="inputGroupFile02"><i
+                      class="bi bi-folder-symlink"></i>Subir</label>
+                </div>
+
+                <h6 style="text-align: center;"><b>Estado</b></h6>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                </div>
+
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Inactivo</label>
+                </div>
+
+                <h6 style="text-align: center;"><b>Rol Asignado</b></h6>
+                <div>
+                  <select name="rol_asignado" id="rol_asignado" style="border-radius: 5px; height: 30px; width: 150px; text-align: center;">
+                    <option value="seleccionar">Seleccionar</option>
+                    <option value="administrado" style="text-align: justify;">ADMINISTADOR</option>
+                    <option value="cajero" style="text-align: justify;">CAJERO</option>
+                    <option value="pedidos" style="text-align: justify;">PEDIDOS</option>
+                    <option value="cocinero" style="text-align: justify;">COCINERO</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
           </div>
-
-          <h6><b>Estado</b></h6>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-            <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-          </div>
-
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Inactivo</label>
-          </div> <br>
-
-          <h6><b>Rol Asignado</b></h6>
-          <div>
-            <select name="rol_asignado" id="rol_asignado" style="border-radius: 5px; height: 30px; width: 150px; text-align: center;">
-              <option value="seleccionar">Seleccionar</option>
-              <option value="administrado">ADMINISTADOR</option>
-              <option value="cajero">CAJERO</option>
-              <option value="pedidos">PEDIDOS</option>
-              <option value="cocinero">COCINERO</option>
-            </select>
-          </div>
-
         </form>
 
       </div>
@@ -146,10 +166,10 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
           style="background-color: #E74C3C; text-align: center; border-color: #E74C3C; color: black;"><i
-            class="bi bi-trash"></i> Cancelar</button>
+            class="bi bi-trash"></i><b> Cancelar</b></button>
         <button type="button" class="btn btn-primary"
           style="background-color: #ABEBC6; text-align: center; border-color: #ABEBC6; color: black"
-          onclick="agregar()"><i class="bi bi-folder-check"></i> Guardar</button>
+          onclick="agregar()"><i class="bi bi-folder-check"></i><b> Guardar</b></button>
       </div>
 
     </div>
