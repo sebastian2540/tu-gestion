@@ -1,32 +1,64 @@
-
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
-.container{
-    	width: 100%;
-        /* position: fixed; */
+.container {
+  width: 100%;
 }
 
-.container img{
-    width: 100%;
-    height: 150px;
+.container img {
+  width: 100%;
+  height: 155px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .float-end {
-    margin: 20px 20px 0px 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 24px 100px 10px 0px;
 }
 
 .float-end img {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 7%;
-    right: 1%;
- }
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
 
- .iconoPage{
-    position: absolute;
-    top: 0;
-    left: 0;
- }
+.iconoPage {
+  margin: all;
+  width: 158px;
+  height: 130px;
+  float: left;
+  margin-right: 50px;
+  position: absolute;
+  top: 0;
+  left: 48px;
+}
+
+.navbar {
+  --bs-bg-opacity: 0;
+  margin-top: 153px;
+}
+
+.offcanvas {
+  left: 0;
+  background-color: #ffca8c;
+}
+
+.offcanvas-header {
+  position: absolute;
+  right: 0;
+}
+
+.d-flex {
+  margin-top: 3rem !important;
+}
+
+.navbar-nav {
+  padding-top: 12px;
+}
