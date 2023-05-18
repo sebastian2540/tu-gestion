@@ -40,7 +40,7 @@ th {
 }
 
 tr:nth-child(even) {
-	background-color: red;
+	background-color: #D9D9D9;
 }
 
 .campoNuevoUsuario{
