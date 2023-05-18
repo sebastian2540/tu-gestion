@@ -8,7 +8,7 @@
 }
 .Bienvenido {
 text-align: center;
-    font-size: 180px;
+    font-size: 250px;
     color: #f5e8e8;
    font-family: 'Architects Daughter', sans-serif;
 
@@ -23,57 +23,46 @@ body{
 }
  
 .Usuario{
-    width: 600px;
+    width: 620px;
     height: 620px;
-    background: #cbcede75;
-    color: #f5ecec;
+    background: #b19d9dad;
+    color: #0a0a0a;
     top: 60%;
-    left: 60%;
+    left: 58%;
     position:absolute;
-    transform: translate(0%,-50%);
+    transform: translate(-10%,-50%);
     box-sizing: border-box;
     padding: 70px 30px;
-   border-bottom-right-radius: 30px;
-   border-top-right-radius: 30px;
+    border-radius: 30px;
 
 }
-.usuariologo{
-    width: 600px;
-    height: 620px;
-    background: #cbcede75;
-    color: #f5ecec;
-    top: 60%;
-    left: 60px;
-    position: absolute;
-    transform: translate(100%,-50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-    border-bottom-left-radius: 30px;
-    border-top-left-radius: 30px;
+.posicionInput{
+float:left;
+
 }
 .Usuario .avatar{
-    height: 500px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
     position: absolute;
-    top: 50px;
-    left: calc(-100% - 50px);
+    top: 40px;
+    left: calc(-120% - 50px);
 }
 .Usuario h1{
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 62px;
+    font-size: 72px;
 }
 .input label{
     margin: 0;
     padding: 0;
     font-weight: bold;
     display: block;
-
+    
 }
 .Usuario input{
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .Usuario input[type="text"],
 .Usuario input[type=password]{
