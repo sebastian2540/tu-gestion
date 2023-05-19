@@ -33,6 +33,7 @@ function actualizarTabla() {
 		let telefonoCell = row.insertCell(4);
 		let ciudadCell = row.insertCell(5);
 		let accionesCell = row.insertCell(6);
+
 		identificacionCell.innerHTML = lista[i].identificacion;
 		nombreCell.innerHTML = lista[i].nombre;
 		apellidoCell.innerHTML = lista[i].apellido;
@@ -48,6 +49,7 @@ function editar(index) {
 	let nombre = prompt("Nombre", lista[index].nombre);
 	let apellido = prompt("Apellido", lista[index].apellido);
 	let edad = prompt("Edad", lista[index].edad);
+
 	lista[index].nombre = nombre;
 	lista[index].apellido = apellido;
 	lista[index].edad = edad;
@@ -58,3 +60,4 @@ function eliminar(index) {
 	lista.splice(index, 1);
 	actualizarTabla();
 }
+

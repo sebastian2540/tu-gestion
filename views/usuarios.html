@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!--Conexión de CSS-->
-  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="../css/home.css" />
   <link rel="stylesheet" href="/css/usuarios.css" />
 
   <!--Icono pestaña navegador-->
@@ -25,21 +25,20 @@
 </head>
 
 <body>
+
   <!--Cabecera header-->
   <header class="container">
-    <img src="/image/home.png" alt="image_home" />
+    <img src="../image/home.png" alt="image_home" />
 
     <div class="iconoPage">
-      <img src="/image/icono_Page.png" alt="icono" id="icono" />
+      <img src="../image/Logo_Circulo_2.png" alt="icono" id="icono" />
+    </div>
+
+    <!--Logo del login-->
+    <div class="float-end">
+      <a href="/cartaDigital.html"><img src="../image/user_login.png" alt="user_login" /></a>
     </div>
   </header>
-
-  <!--Logo del login-->
-  <div>
-    <div class="float-end">
-      <a href="/cartaDigital.html"><img src="/image/user_login.png" alt="user_login" /></a>
-    </div>
-  </div>
 
   <!--Botón de Nuevo registro-->
   <button class="btnNuevoRegistro" type="button" onclick="" data-bs-toggle="modal" data-bs-target="#NuevoUsuario">
@@ -77,6 +76,7 @@
         <form>
           <div class="container">
             <div class="row">
+
               <!--Columna 1-->
               <div class="col-md-2">
                 <label><i class="bi bi-person-vcard"></i><b> Identificación *</b></label>
@@ -167,12 +167,13 @@
 
       </div>
 
+      <!--Botones de Cancelar y Guardar-->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
           style="background-color: #E74C3C; text-align: center; border-color: #E74C3C; color: black;"><i
             class="bi bi-trash"></i><b> Cancelar</b></button>
-        <button type="button" class="btn btn-primary"
-          style="background-color: #ABEBC6; text-align: center; border-color: #ABEBC6; color: black"
+            
+        <button type="button" class="btn btn-primary"style="background-color: #ABEBC6; text-align: center; border-color: #ABEBC6; color: black"
           onclick="agregar()"><i class="bi bi-folder-check"></i><b> Guardar</b></button>
       </div>
 
