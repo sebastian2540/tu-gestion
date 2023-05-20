@@ -19,6 +19,7 @@ function agregar() {
 	};
 	lista.push(objeto);
 	actualizarTabla();
+
 }
 
 function actualizarTabla() {
@@ -40,8 +41,8 @@ function actualizarTabla() {
 		edadCell.innerHTML = lista[i].edad;
 		telefonoCell.innerHTML = lista[i].telefono;
 		ciudadCell.innerHTML = lista[i].ciudad;
-		accionesCell.innerHTML = 
-		'<button style="background-color: #ABEBC6; text-align: center; border-color: #ABEBC6; color: black; border-radius: 5px; font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="editar(' + i + ')"><b>Editar</b></button> <button style="background-color: #E74C3C; text-align: center; border-color: #E74C3C; color: black; border-radius: 5px" type="button" onclick="eliminar(' + i + ')"><b>Eliminar</b></button> <button style="background-color: #5499C7; text-align: center; border-color: #5499C7; color: black; border-radius: 5px" type="button" onclick="acti_desa(' + i + ')"><b>Activar / Desactivar</b></button>';
+		accionesCell.innerHTML =
+			'<button style="background-color: #ABEBC6; text-align: center; border-color: #ABEBC6; color: black; border-radius: 5px; font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="editar(' + i + ')"><b>Editar</b></button> <button style="background-color: #E74C3C; text-align: center; border-color: #E74C3C; color: black; border-radius: 5px" type="button" onclick="eliminar(' + i + ')"><b>Eliminar</b></button> <button style="background-color: #5499C7; text-align: center; border-color: #5499C7; color: black; border-radius: 5px" type="button" onclick="acti_desa(' + i + ')"><b>Activar / Desactivar</b></button>';
 	}
 }
 
@@ -49,10 +50,15 @@ function editar(index) {
 	let nombre = prompt("Nombre", lista[index].nombre);
 	let apellido = prompt("Apellido", lista[index].apellido);
 	let edad = prompt("Edad", lista[index].edad);
+	let telefono = prompt("Teléfono", lista[index].telefono);
+	let ciudad = prompt("Ciudad", lista[index].ciudad);
 
 	lista[index].nombre = nombre;
 	lista[index].apellido = apellido;
 	lista[index].edad = edad;
+	lista[index].telefono = telefono;
+	lista[index].ciudad = ciudad;
+
 	actualizarTabla();
 }
 
