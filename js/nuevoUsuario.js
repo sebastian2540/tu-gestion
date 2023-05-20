@@ -20,7 +20,7 @@ function agregar() {
 	lista.push(objeto);
 	actualizarTabla();
 
-}
+}	
 
 function actualizarTabla() {
 	let tabla = document.getElementById("tabla");
