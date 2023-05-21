@@ -24,10 +24,10 @@ body {
 }
 
 .float-end img {
-  width: 74px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   position: absolute;
-  top: 5px;
+  top: 15px;
   right: 0;
 }
 

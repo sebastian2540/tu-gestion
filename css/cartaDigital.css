@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+#icono {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+}
+
+body {
+    background-image: url("https://trello.com/1/cards/644b161a2293b715cc296b8e/attachments/64530e2d80058c3da789cf04/previews/64530e2e80058c3da789cf12/download/image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.titulo_principal {
+    color: #FFFFFF;
+    font-size: 160px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.float-end {
+    margin: 20px 20px 0px 0px;
+}
+
+.float-end img {
+   width: 60px;
+   height: 60px;
+}
