@@ -44,17 +44,30 @@ body {
 
 .navbar {
   --bs-bg-opacity: 0;
-  margin-top: 124px;
+  margin-top: 130px;
 }
 
 .offcanvas {
   left: 0;
-  background-color: #ffca8c;
+  background-color: #f3cea5;
 }
 
 .offcanvas-header {
   position: absolute;
   right: 0;
+}
+
+.offcanvas-body {
+  background-color: #f3cea5;
+}
+
+img,
+svg {
+  color: black;
+}
+
+.container-fluid {
+  background-color: white;
 }
 
 .d-flex {
@@ -69,21 +82,21 @@ body {
   border: 0;
 }
 
-.form-control {
-  background-color: #fff3cd;
-}
-
 .gestion {
   width: 120px;
   height: 34px;
-  background: #d8af97;
+  background: #A58046;
   border-radius: 5px;
   margin-top: 45px;
 }
 
 .form-control {
   font-family: "Yanone Kaffeesatz", sans-serif;
+  background-color: #d9d9d96e;
   font-size: 22px;
+  text-align: justify;
+  border-radius: 15px;
+  border-color: #d9d9d96e;
 }
 
 .gestion p {
@@ -97,6 +110,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 22px;
 }
 
 .nav-link {
@@ -109,7 +123,7 @@ body {
 .atencion {
   width: 120px;
   height: 34px;
-  background: #d8af97;
+  background: #A58046;
   border-radius: 5px;
   margin-top: 10px;
 }
