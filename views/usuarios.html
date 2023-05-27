@@ -30,7 +30,7 @@
     <img src="../image/home.png" alt="image_home" />
 
     <div class="iconoPage">
-      <img src="../image/Logo_Circulo_2.png" alt="icono" id="icono" />
+      <a href="../page/home.html"><img src="../image/Logo_Circulo_2.png" alt="icono" id="icono" /></a>
     </div>
 
     <!--Logo del login-->
@@ -139,14 +139,14 @@
       <th>Edad</th>
       <th>Teléfono</th>
       <th>Ciudad</th>
-      <th>Acciones</th>
+      <th style="text-align: center;">Acciones</th>
     </tr>
     <tbody id="tabla"></tbody>
   </table>
   <script src="/js/nuevoUsuario.js"></script>
 
 
-  
+
 
 </body>
 
@@ -172,53 +172,43 @@
                 <input class="campoNuevoUsuario" type="text" id="identificacion" required> <br><br>
 
                 <label><i class="bi bi-envelope-at"></i><b> Correo Electrónico</b></label>
-                <input class="campoNuevoUsuario" type="email" id="correo_electronico" />
-                <br /><br />
+                <input class="campoNuevoUsuario" type="email" id="correo_electronico" /> <br /><br />
 
                 <label><i class="bi bi-lock"></i><b> Contraseña</b></label>
-                <input class="campoNuevoUsuario" type="password" id="contrasena" />
-                <br /><br />
+                <input class="campoNuevoUsuario" type="password" id="contrasena" /> <br /><br />
               </div>
 
               <!--Columna 2-->
               <div class="col-md-2">
                 <label><i class="bi bi-person-badge"></i><b> Nombre</b></label>
-                <input class="campoNuevoUsuario" type="text" id="nombre" />
-                <br /><br />
+                <input class="campoNuevoUsuario" type="text" id="nombre" /> <br /><br />
 
                 <label><i class="bi bi-pin-map"></i><b> Ciudad</b></label>
-                <input class="campoNuevoUsuario" type="text" id="ciudad" />
-                <br /><br />
+                <input class="campoNuevoUsuario" type="text" id="ciudad" /> <br /><br />
 
                 <label><i class="bi bi-calendar3"></i><b> Fecha Creación</b></label>
-                <input class="campoNuevoUsuario" type="date" id="fech_creacion" />
-                <br /><br />
+                <input class="campoNuevoUsuario" type="date" id="fech_creacion" /> <br /><br />
               </div>
 
               <!--Columna 3-->
               <div class="col-md-2">
                 <label><i class="bi bi-person-badge"></i><b> Apellido</b></label>
-                <input class="campoNuevoUsuario" type="text" id="apellido" />
-                <br /><br />
+                <input class="campoNuevoUsuario" type="text" id="apellido" /> <br /><br />
 
                 <label><i class="bi bi-building-add"></i><b> Dirección</b></label>
-                <input class="campoNuevoUsuario" type="text" id="direccion" />
-                <br /><br />
+                <input class="campoNuevoUsuario" type="text" id="direccion" /> <br /><br />
               </div>
 
               <!--Columna 4-->
               <div class="col-md-2">
                 <label><i class="bi bi-telephone-plus"></i><b> Teléfono</b></label>
-                <input class="campoNuevoUsuario" type="text" id="telefono" />
-                <br /><br />
+                <input class="campoNuevoUsuario" type="text" id="telefono" /> <br /><br />
 
                 <label><i class="bi bi-calendar3"></i><b> Edad</b></label>
-                <input class="campoNuevoUsuario" type="text" id="edad" />
-                <br /><br />
+                <input class="campoNuevoUsuario" type="text" id="edad" /> <br /><br />
 
                 <label><i class="bi bi-calendar3"></i><b> Fecha nacimiento</b></label>
-                <input class="campoNuevoUsuario" type="date" id="fecha_nacimiento" />
-                <br /><br />
+                <input class="campoNuevoUsuario" type="date" id="fecha_nacimiento" /> <br /><br />
               </div>
 
               <!--Columna 5-->
@@ -232,8 +222,8 @@
                 <br />
 
                 <div class="input-group mb-3" style="width: 200px">
-                  <input type="file" class="form-control" id="inputGroupFile02" />
-                  <label class="input-group-text" for="inputGroupFile02"><i
+                  <input type="file" class="form-control" id="inputGroupFile02" style="border-color: black;"/>
+                  <label class="input-group-text" for="inputGroupFile02" style="border-color: black;"><i
                       class="bi bi-folder-symlink"></i>Subir</label>
                 </div>
 
@@ -302,33 +292,78 @@
   </div>
 </div>
 
-  <!--Alerta de registro guardado-->
-  <div class="toast-container position-fixed bottom-0 end-0 p-3" >
-    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="background: #ABEBC6;">
-      <div class="toast-header">
-        <img src="/image/guardado.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
-        <strong class="me-auto">Tu Gestión</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-      <div class="toast-body">
-        El usuario fue guardado correctamente
-      </div>
+<!--Alerta de registro guardado-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="background: #ABEBC6;">
+    <div class="toast-header">
+      <img src="/image/guardado.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
+      <strong class="me-auto">Información</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      El registro fue guardado correctamente
     </div>
   </div>
+</div>
 
-  <!--Alerta de registro no guardado-->
-  <div class="toast-container position-fixed bottom-0 end-0 p-3" >
-    <div id="liveToastC" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="background: #F06565;">
-      <div class="toast-header">
-        <img src="/image/error.png" class="rounded me-2" alt="error" height="20px" width="20px">
-        <strong class="me-auto">Tu Gestión</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-      <div class="toast-body">
-        El usuario no fue guardado correctamente
-      </div>
+<!--Alerta de registro no guardado-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToastC" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="background: #F06565;">
+    <div class="toast-header">
+      <img src="/image/error.png" class="rounded me-2" alt="error" height="20px" width="20px">
+      <strong class="me-auto">Información</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      El registro no fue guardado correctamente
     </div>
   </div>
+</div>
+
+<!--Alerta de registro borrar-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToastBorrar" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+    style="background: #ABEBC6;">
+    <div class="toast-header">
+      <img src="/image/guardado.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
+      <strong class="me-auto">Información</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      El registro fue borrado correctamente
+    </div>
+  </div>
+</div>
+
+<!--Alerta de registro editar-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToastEditar" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+    style="background: #ABEBC6;">
+    <div class="toast-header">
+      <img src="/image/guardado.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
+      <strong class="me-auto">Información</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      El registro fue editado correctamente
+    </div>
+  </div>
+</div>
+
+<!--Alerta de registro Activar Desactivar-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToastActivarDesactivar" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+    style="background: #F06565;">
+    <div class="toast-header">
+      <img src="/image/error.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
+      <strong class="me-auto">Información</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      El registro fue desactivado correctamente
+    </div>
+  </div>
+</div>
 
 <!-- Modal Editar Registro-->
 <div class="modal fade" id="NuevoUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
