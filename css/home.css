@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
 body {
   margin: 0;
 }
@@ -85,7 +87,7 @@ svg {
 .gestion {
   width: 120px;
   height: 34px;
-  background: #A58046;
+  background: #a58046;
   border-radius: 5px;
   margin-top: 45px;
 }
@@ -123,7 +125,7 @@ svg {
 .atencion {
   width: 120px;
   height: 34px;
-  background: #A58046;
+  background: #a58046;
   border-radius: 5px;
   margin-top: 10px;
 }
@@ -133,4 +135,57 @@ svg {
   color: white;
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 22px;
+}
+
+.footer {
+  background-color: #424949;
+  height: 100px;
+  border: 1px solid;
+  border-color: black;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 12px;
+}
+
+.container-footer h1,
+h2 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.bi {
+  color: white;
+}
+
+.icono {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.iconos-li {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.card img {
+  width: 100%;
+  height: 275px;
+}
+
+.card-title {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 25px;
+  text-align: center;
 }
