@@ -19,19 +19,20 @@ function agregar() {
 		telefono: telefono,
 		ciudad: ciudad
 	};
+
 	lista.push(objeto);
 	actualizarTabla();
 
 	/*Configuración de alerta*/
-	const toastTrigger = document.getElementById('liveToastBtn')
-	const toastLiveExample = document.getElementById('liveToast')
+	// const toastTrigger = document.getElementById('liveToastBtn')
+	// const toastLiveExample = document.getElementById('liveToast')
 
-	if (toastTrigger) {
-		const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-		toastTrigger.addEventListener('click', () => {
-			toastBootstrap.show()
-		})
-	}
+	// if (toastTrigger) {
+	// 	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+	// 	toastTrigger.addEventListener('click', () => {
+	// 		toastBootstrap.show()
+	// 	})
+	// }
 }
 
 function actualizarTabla() {
@@ -53,8 +54,15 @@ function actualizarTabla() {
 		edadCell.innerHTML = lista[i].edad;
 		telefonoCell.innerHTML = lista[i].telefono;
 		ciudadCell.innerHTML = lista[i].ciudad;
+
+		/*Configuración de alerta*/
+		const toastLiveExample = document.getElementById('liveToast')
+		const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+		toastBootstrap.show()
+
 		accionesCell.innerHTML =
-			'<button id="liveToastBtnEditar" style="background-color: #ABEBC6; text-align: center; border-color: #ABEBC6; color: black; border-radius: 5px; font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="editar(' + i + ')"><b>Editar</b></button> <button id="liveToastBtnBorrar" style="background-color: #E74C3C; text-align: center; border-color: #E74C3C; color: black; border-radius: 5px" font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="eliminar(' + i + ')"><b>Eliminar</b></button> <button id="liveToastBtnActivarDesactivar" style="background-color: #5499C7; text-align: center; border-color: #5499C7; color: black; border-radius: 5px" font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="acti_desa(' + i + ')"><b>Activar / Desactivar</b></button>';
+			'<button style="background-color: #ABEBC6; text-align: center; border-color: #ABEBC6; color: black; border-radius: 5px; font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="editar(' + i + ')"><i class="bi bi-pencil-square"></i><b> Editar</b></button> <button style="background-color: #E74C3C; text-align: center; border-color: #E74C3C; color: black; border-radius: 5px" font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="eliminar(' + i + ')"><i class="bi bi-trash"></i><b> Eliminar</b></button> <button style="background-color: #5499C7; text-align: center; border-color: #5499C7; color: black; border-radius: 5px" font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="acti_desa(' + i + ')"><i class="bi bi-question-circle"></i><b> Activar / Desactivar</b></button>';
+
 	}
 }
 
@@ -75,15 +83,11 @@ function editar(index) {
 	actualizarTabla();
 
 	/*Configuración de alerta*/
-	const toastTrigger = document.getElementById('liveToastBtnEditar')
-	const toastLiveExample = document.getElementById('liveToastEditar')
 
-	if (toastTrigger) {
-		const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-		toastTrigger.addEventListener('click', () => {
-			toastBootstrap.show()
-		})
-	}
+	const toastLiveExample = document.getElementById('liveToastEditar')
+	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+	toastBootstrap.show()
+
 
 }
 
@@ -96,30 +100,21 @@ function eliminar(index) {
 	/*alert(isBoss);*/
 
 	/*Configuración de alerta*/
-	const toastTrigger = document.getElementById('liveToastBtnBorrar')
-	const toastLiveExample = document.getElementById('liveToastBorrar')
 
-	if (toastTrigger) {
-		const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-		toastTrigger.addEventListener('click', () => {
-			toastBootstrap.show()
-		})
-	}
+	const toastLiveExample = document.getElementById('liveToastBorrar')
+	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+	toastBootstrap.show()
+
 
 }
 
 function cancelar() {
 
 	/*Configuración de alerta*/
-	const toastTrigger = document.getElementById('liveToastBtnC')
 	const toastLiveExample = document.getElementById('liveToastC')
+	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+	toastBootstrap.show()
 
-	if (toastTrigger) {
-		const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-		toastTrigger.addEventListener('click', () => {
-			toastBootstrap.show()
-		})
-	}
 }
 
 function acti_desa(index) {
@@ -131,14 +126,9 @@ function acti_desa(index) {
 	/*alert(isBoss);*/
 
 	/*Configuración de alerta*/
-	const toastTrigger = document.getElementById('liveToastBtnActivarDesactivar')
 	const toastLiveExample = document.getElementById('liveToastActivarDesactivar')
+	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+	toastBootstrap.show()
 
-	if (toastTrigger) {
-		const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-		toastTrigger.addEventListener('click', () => {
-			toastBootstrap.show()
-		})
-	}
 
 }

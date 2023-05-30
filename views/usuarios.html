@@ -269,7 +269,7 @@
 
       <!--Botones de Cancelar y Guardar-->
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="liveToastBtnC" data-bs-dismiss="modal" style="
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="
               background-color: #e74c3c;
               text-align: center;
               border-color: #e74c3c;
@@ -278,12 +278,11 @@
           <i class="bi bi-trash"></i><b> Cancelar</b>
         </button>
 
-        <button type="button" class="btn btn-primary" id="liveToastBtn" data-bs-dismiss="modal" style="
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="
               background-color: #abebc6;
               text-align: center;
               border-color: #abebc6;
-              color: black;
-            " onclick="agregar()">
+              color: black;" onclick="agregar()">
           <i class="bi bi-folder-check"></i><b> Guardar</b>
         </button>
 
@@ -306,7 +305,7 @@
   </div>
 </div>
 
-<!--Alerta de registro no guardado-->
+<!--Alerta de registro cancelar-->
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
   <div id="liveToastC" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="background: #F06565;">
     <div class="toast-header">
@@ -353,9 +352,9 @@
 <!--Alerta de registro Activar Desactivar-->
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
   <div id="liveToastActivarDesactivar" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
-    style="background: #F06565;">
+    style="background: #ABEBC6;">
     <div class="toast-header">
-      <img src="/image/error.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
+      <img src="/image/guardado.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
       <strong class="me-auto">Información</strong>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
