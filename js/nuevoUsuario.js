@@ -56,8 +56,8 @@ function actualizarTabla() {
 		ciudadCell.innerHTML = lista[i].ciudad;
 
 		/*Configuración de alerta*/
-		const toastLiveExample = document.getElementById('liveToast')
-		const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+		const AlertConfig = document.getElementById('liveToast')
+		const toastBootstrap = bootstrap.Toast.getOrCreateInstance(AlertConfig)
 		toastBootstrap.show()
 
 		accionesCell.innerHTML =
@@ -80,15 +80,12 @@ function editar(index) {
 	lista[index].telefono = telefono;
 	lista[index].ciudad = ciudad;
 
-	actualizarTabla();
-
 	/*Configuración de alerta*/
-
-	const toastLiveExample = document.getElementById('liveToastEditar')
-	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+	const AlertConfig = document.getElementById('liveToastEditar')
+	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(AlertConfig)
 	toastBootstrap.show()
 
-
+	actualizarTabla();
 }
 
 function eliminar(index) {
@@ -101,18 +98,16 @@ function eliminar(index) {
 
 	/*Configuración de alerta*/
 
-	const toastLiveExample = document.getElementById('liveToastBorrar')
-	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+	const AlertConfig = document.getElementById('liveToastBorrar')
+	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(AlertConfig)
 	toastBootstrap.show()
-
-
 }
 
 function cancelar() {
 
 	/*Configuración de alerta*/
-	const toastLiveExample = document.getElementById('liveToastC')
-	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+	const AlertConfig = document.getElementById('liveToastC')
+	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(AlertConfig)
 	toastBootstrap.show()
 
 }
@@ -126,9 +121,7 @@ function acti_desa(index) {
 	/*alert(isBoss);*/
 
 	/*Configuración de alerta*/
-	const toastLiveExample = document.getElementById('liveToastActivarDesactivar')
-	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+	const AlertConfig = document.getElementById('liveToastActivarDesactivar')
+	const toastBootstrap = bootstrap.Toast.getOrCreateInstance(AlertConfig)
 	toastBootstrap.show()
-
-
 }

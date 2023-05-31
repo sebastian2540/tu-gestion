@@ -35,7 +35,7 @@ body {
 
 .iconoPage {
   margin: all;
-  width: 158px;
+  width: 131px;
   height: 130px;
   float: left;
   margin-right: 50px;
@@ -159,7 +159,7 @@ h2 {
 }
 
 .bi {
-  color: white;
+  /* color: white; */
 }
 
 .icono {

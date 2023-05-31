@@ -8,6 +8,7 @@
 
     <!--Conexión de CSS-->
     <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/pedidos.css">
 
     <!--Icono pestaña navegador-->
     <link rel="shortcut icon" href="/image/icono_page.png" type="image/x-icon" />
@@ -127,6 +128,31 @@
             </div>
         </div>
     </nav>
+
+    <!--Botón de Nuevo registro-->
+    <button class="btnNuevoRegistroPedidos" type="button" onclick="" data-bs-toggle="modal"
+        data-bs-target="#nuevoProducto">
+        <b><i class="bi bi-person-fill-add"></i> Nuevo Registro</b>
+    </button>
+
+    <!--Tabla de nuevos registros-->
+    <table class="tablaNuevosRegistrosPedidos">
+        <tr>
+            <th>Fecha</th>
+            <th>Cod. Pedido</th>
+            <th>Cliente</th>
+            <th>Mesa</th>
+            <th>Estado</th>
+            <th>Comprobante Pago</th>
+            <th>Usuario</th>
+            <th>Estado</th>
+            <th style="text-align: center">Acciones</th>
+        </tr>
+        <tbody id="tablaPedidos"></tbody>
+    </table>
+
+
+    <script src="..."></script>
 </body>
 
 <!--Conexión de Bootstrap-->
