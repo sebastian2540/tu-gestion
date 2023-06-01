@@ -40,7 +40,6 @@ function actualizarTablaProductos() {
         descripcionProducto.innerHTML = listaProductos[i].descripcion;
         precioCell.innerHTML = listaProductos[i].precio;
         estadoProducto.innerHTML = listaProductos[i].estado;
-
         accionesProdCell.innerHTML =
             '<button style="background-color: #ABEBC6; text-align: center; border-color: #ABEBC6; color: black; border-radius: 5px; font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="editarProducto(' + i + ')"><i class="bi bi-pencil-square"></i><b> Editar</b></button> <button style="background-color: #E74C3C; text-align: center; border-color: #E74C3C; color: black; border-radius: 5px; font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="eliminarProducto(' + i + ')"><i class="bi bi-trash"></i><b> Eliminar</b></button> <button style="background-color: #5499C7; text-align: center; border-color: #5499C7; color: black; border-radius: 5px; font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="activarDesactivar(' + i + ')"><i class="bi bi-question-circle"></i><b> Activar / Desactivar</b></button>';
 
@@ -98,7 +97,7 @@ function activarDesactivar(index) {
     actualizarTablaProductos();
 
     /*Configuración de la ventana de confirmación*/
-    let isBoss = confirm("¿Deseas borrar el producto?");
+    let isBoss = confirm("¿Deseas activar o desactivar el producto?");
 
     /*Configuración de alerta*/
     const AlertConfig = document.getElementById('liveToastActivarDesactivar')

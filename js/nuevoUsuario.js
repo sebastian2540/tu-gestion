@@ -63,6 +63,13 @@ function actualizarTabla() {
 		accionesCell.innerHTML =
 			'<button style="background-color: #ABEBC6; text-align: center; border-color: #ABEBC6; color: black; border-radius: 5px; font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="editar(' + i + ')"><i class="bi bi-pencil-square"></i><b> Editar</b></button> <button style="background-color: #E74C3C; text-align: center; border-color: #E74C3C; color: black; border-radius: 5px" font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="eliminar(' + i + ')"><i class="bi bi-trash"></i><b> Eliminar</b></button> <button style="background-color: #5499C7; text-align: center; border-color: #5499C7; color: black; border-radius: 5px" font-family: Ubuntu Condensed, sans-serif;" type="button" onclick="acti_desa(' + i + ')"><i class="bi bi-question-circle"></i><b> Activar / Desactivar</b></button>';
 
+        /*Cuando se guarde la información coloque los campos en blanco*/
+		let identificacion = document.getElementById("identificacion").value = "";
+		let nombre = document.getElementById("nombre").value = "";
+		let apellido = document.getElementById("apellido").value = "";
+		let edad = document.getElementById("edad").value = "";
+		let telefono = document.getElementById("telefono").value = "";
+		let ciudad = document.getElementById("ciudad").value = "";
 	}
 }
 

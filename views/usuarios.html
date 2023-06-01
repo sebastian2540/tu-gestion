@@ -58,22 +58,24 @@
         </div>
         <div class="offcanvas-body">
           <form class="d-flex" role="search">
-            <input class="form-control"
+            <input type="text" id="formulario" class="form-control my-2"
               style="background-color: #d9d9d96e; font-size: 22px; font-size: 22px; border-radius: 15px; border-color: #d9d9d96e;"
               type="search" placeholder="Buscador" aria-label="Search" />
-            <button class="btn" type="submit">
+
+            <button class="btn" type="" id="boton">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
                 viewBox="0 0 16 16">
                 <path
                   d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
               </svg>
             </button>
+
           </form>
 
           <div class="gestion">
             <p><u> Gestión</u></p>
           </div>
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="resultado">
             <li class="nav-item">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -143,7 +145,6 @@
     </tr>
     <tbody id="tabla"></tbody>
   </table>
-  <script src="/js/nuevoUsuario.js"></script>
 
   <!--Alerta de registro guardado-->
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -220,16 +221,66 @@
     </div>
   </div>
 
+  <!-- <script>
 
+    const productos = [
+      { nombre: 'Usuarios', valor: 500 },
+      { nombre: 'Pera', valor: 500 },
+      { nombre: 'Sandia', valor: 500 },
+      { nombre: 'Melon', valor: 500 },
+      { nombre: 'Frutilla', valor: 500 },
+    ]
+
+    const formulario = document.querySelector('#formulario');
+    const boton = document.querySelector('#boton');
+    const resultado = document.querySelector('#resultado');
+
+    const filtrar = () => {
+      // console.log(formulario.value);
+      resultado.innerHTML = '';
+
+      const texto = formulario.value.toLowerCase();
+
+      for (let producto of productos) {
+        let nombre = producto.nombre.toLowerCase();
+
+        if (nombre.indexOf(texto) !== -1) {
+          resultado.innerHTML += `
+          <li>${producto.nombre} - valor: ${producto.valor}</li>
+          `
+        }
+      }
+
+      if(resultado.innerHTML == ''){
+        resultado.innerHTML += `
+          <li>Producto no encontrado</li>
+          `
+      }
+    }
+
+    boton.addEventListener('click', filtrar)
+    formulario.addEventListener('keyup', filtrar)
+
+
+    filtrar();
+
+
+
+
+  </script> -->
+  
+  <script src="/js/nuevoUsuario.js"></script>
 </body>
 
 <!-- Modal Nuevo Registro-->
-<div class="modal fade" id="NuevoUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+<div class="modal fade" id="NuevoUsuario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="exampleModalLabel" aria-hidden="true"
   style="font-family: 'Ubuntu Condensed', sans-serif; color: black;">
   <div class="modal-dialog" style="max-width: 100%;">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-person-fill-add" style="font-size: 30px;"></i><b> Nuevo Registro</b>
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-person-fill-add"
+            style="font-size: 30px;"></i><b> Nuevo Registro</b>
         </h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>

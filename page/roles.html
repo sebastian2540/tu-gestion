@@ -29,7 +29,7 @@
     <img src="../image/home.png" alt="image_home" />
 
     <div class="iconoPage">
-      <img src="../image/Logo_Circulo_2.png" alt="icono" id="icono" style="padding: 4px;" />
+      <a href="../page/home.html"><img src="../image/Logo_Circulo_2.png" alt="icono" id="icono" style="padding: 4px;" /></a>
     </div>
 
     <!--Logo del login-->
@@ -130,7 +130,6 @@
   <!--Tabla de nuevos registros-->
   <table class="tablaNuevosRegistrosRoles">
     <tr>
-      <th>ID</th>
       <th>Nombre</th>
       <th>Estado</th>
       <th style="text-align: center">Acciones</th>
@@ -138,20 +137,93 @@
     <tbody id="tablaRoles"></tbody>
   </table>
 
+  <!--Alerta de registro guardado-->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToastGuardar" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+      style="background: #ABEBC6;">
+      <div class="toast-header">
+        <img src="/image/guardado.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
+        <strong class="me-auto">Información</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        El registro fue guardado correctamente
+      </div>
+    </div>
+  </div>
 
+  <!--Alerta de registro cancelar -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToastCancelar" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+      style="background: #F06565;">
+      <div class="toast-header">
+        <img src="/image/error.png" class="rounded me-2" alt="error" height="20px" width="20px">
+        <strong class="me-auto">Información</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        El registro no fue guardado correctamente
+      </div>
+    </div>
+  </div>
 
-  <script src="..."></script>
+  <!--Alerta de registro editar-->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToastEditar" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+      style="background: #ABEBC6;">
+      <div class="toast-header">
+        <img src="/image/guardado.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
+        <strong class="me-auto">Información</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        El registro fue editado correctamente
+      </div>
+    </div>
+  </div>
+
+  <!--Alerta de registro borrar-->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToastBorrar" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+      style="background: #ABEBC6;">
+      <div class="toast-header">
+        <img src="/image/guardado.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
+        <strong class="me-auto">Información</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        El registro fue borrado correctamente
+      </div>
+    </div>
+  </div>
+
+  <!--Alerta de registro Activar Desactivar-->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToastActivarDesactivar" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+      style="background: #ABEBC6;">
+      <div class="toast-header">
+        <img src="/image/guardado.png" class="rounded me-2" alt="guardado" height="20px" width="20px">
+        <strong class="me-auto">Información</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        El registro fue desactivado correctamente
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/nuevoRoles.js"></script>
 </body>
 
 <!-- Modal Nuevo Registro Roles-->
-<div class="modal fade" id="nuevoRoles" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+<div class="modal fade" id="nuevoRoles" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="exampleModalLabel" aria-hidden="true"
   style="font-family: 'Ubuntu Condensed', sans-serif; color: black;">
   <div class="modal-dialog" style="max-width: 100%; max-height: 100%;">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-people" style="font-size: 30px;"></i><b>
-            Nuevo Registro
-            Roles</b>
+            Nuevo Registro Roles</b>
         </h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -164,7 +236,7 @@
               <!--Columna 1-->
               <div class="col-md-2">
                 <label><i class="bi bi-file-text"></i><b> Nombre</b></label>
-                <input class="campoNuevoUsuario" type="text" id="nombre" style="width: 250px;">
+                <input class="campoNuevoUsuario" type="text" id="nombreRol" style="width: 250px;">
               </div> <br>
 
               <h6 style="text-align: justify"><b>Roles por grupo de seguridad</b></h6>
@@ -396,7 +468,7 @@
                   <label class="form-check-label" for="flexSwitchCheckDefault">Inactivo</label>
                 </div>
 
-                <input class="campoNuevoUsuario" type="text" id="estado_text">
+                <input class="campoNuevoUsuario" type="text" id="estado_text" value="ACTIVO" style="background: white; background-color: white; color: white; border: white;" disabled>
               </div>
 
 
@@ -412,7 +484,7 @@
               text-align: center;
               border-color: #e74c3c;
               color: black;
-            " onclick="cancelarProducto()">
+            " onclick="cancelarRoles()">
           <i class="bi bi-trash"></i><b> Cancelar</b>
         </button>
 
@@ -420,7 +492,7 @@
               background-color: #abebc6;
               text-align: center;
               border-color: #abebc6;
-              color: black;" onclick="agregarProductos()">
+              color: black;" onclick="agregarRoles()">
           <i class="bi bi-folder-check"></i><b> Guardar</b>
         </button>
 
