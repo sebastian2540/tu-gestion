@@ -64,20 +64,20 @@ body {
 
 }
 
-
 .carousel-control-prev,
 .carousel-control-next {
     width: auto;
     height: auto;
     /* background-color: rgba(0, 0, 0, 0.5); */
     /* Establece el color de fondo de los controles de navegación */
-    border-radius: 20%;
+    /* border-radius: 20%; */
+    background-color: transparent;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     /* Establece el color del ícono de los controles de navegación */
-    background-color: #1c151515;
+    background-color: transparent;
 }
 
 .visually-hidden {
