@@ -6,7 +6,7 @@
     padding: 10px;
 }
 
-.container{
+.container {
     display: flex;
 }
 
@@ -30,6 +30,120 @@ body {
 }
 
 .float-end img {
-   width: 60px;
-   height: 60px;
+    width: 60px;
+    height: 60px;
+}
+
+.comidas {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    display: block;
+    margin: 0 auto;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.carousel-item {
+    /* Ajusta la altura deseada */
+    height: 530px;
+}
+
+.carousel-item img {
+    /* Ajusta el tamaño de la imagen manteniendo la proporción de aspecto */
+    width: 1500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+
+    .comidas {
+        width: 100%;
+    }
+
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    height: auto;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* Establece el color de fondo de los controles de navegación */
+    border-radius: 20%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    /* Establece el color del ícono de los controles de navegación */
+    background-color: #1c151515;
+}
+
+.visually-hidden {
+    bottom: 10px;
+}
+
+img:hover {
+    /* Escalar la imagen al 110% en el estado hover */
+    /* transform: scale(1.1);
+    border: 0.5px solid;
+    border-radius: 5px; */
+    /* Restaurar la opacidad al 100% en el estado hover */
+    /* opacity: 1; */
+}
+
+/* .font-weight-bold {
+    color: rgb(255, 255, 255);
+} */
+
+.btn-primary {
+    width: 100px;
+    height: 35px;
+    background-color: #5499c7;
+    border-color: #5499c7;
+    border-radius: 5px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background: #5499c7c0;
+}
+
+h2 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.parrafos_image {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 20px;
+}
+
+h2:hover {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #2aaaff;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
+    font-family:'Ubuntu Condensed', sans-serif; 
+}
+
+.card-img-top {
+    height: 250px;
+    width: 200px;
+}
+
+.col,
+btn-primary {
+    text-align: center;
+}
+.precio{
+    font-family:'Ubuntu Condensed', sans-serif; 
+    font-size: 20px;
 }
