@@ -29,7 +29,8 @@
         <img src="../image/home.png" alt="image_home" />
 
         <div class="iconoPage">
-            <a href="../page/home.html"><img src="../image/Logo_Circulo_2.png" alt="icono" id="icono" style="padding: 5px;"/></a>
+            <a href="../page/home.html"><img src="../image/Logo_Circulo_2.png" alt="icono" id="icono"
+                    style="padding: 5px;" /></a>
         </div>
 
         <!--Logo del login-->
@@ -41,9 +42,9 @@
     <!--Navbar-->
     <nav class="navbar" style="background-color: white;">
         <div class="container-fluid">
-            <button class="navbar-toggler" style="background-color: white; border-color: white; max-width: 100%;" type="button"
-                data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" style="background-color: white; border-color: white; max-width: 100%;"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <svg xmlns="http://www.w3.org/2000/svg" height="2rem" fill="none" viewBox="0 0 24 24"
                     strokeWidth="{1.5}" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -135,6 +136,10 @@
         <b><i class="bi bi-person-fill-add"></i> Nuevo Registro</b>
     </button>
 
+    <label class="reportePedidos"><b>Reporte</b></label>
+    <a href="../page/home.html"><i class="bi bi-file-earmark-excel" style="font-size: 30px; color: rgba(0, 0, 255, 0.514);"></i></a>
+
+
     <!--Tabla de nuevos registros-->
     <table class="tablaNuevosRegistrosPedidos">
         <tr>
@@ -157,94 +162,289 @@
 
 <!-- Modal Nuevo Registro-->
 <div class="modal fade" id="nuevoPedido" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="exampleModalLabel" aria-hidden="true"
-  style="font-family: 'Ubuntu Condensed', sans-serif; color: black;">
-  <div class="modal-dialog" style="max-width: 100%; max-height: 100%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-cart-check"
-            style="font-size: 30px;"></i><b> Nuevo Registro Pedido</b>
-        </h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-        <form action="" class="formulario" id="formulario">
-          <div class="container">
-            <div class="row">
-
-              <label><b>Código Pedido</b> <input type="number" value="0001" style="background: white; background-color: white; color: red; border: white;" disabled ></label>
-              
-              <label style="margin-left: 285px; margin-top: -25px;"><b>Mesa</b> <input type="number" value="5" style="background: white; background-color: white; color: red; border: white; width: 40px; text-align: center;"></label>
-
-              <label style="margin-left: 570px; margin-top: -25px;"><b>Fecha Creación</b> <input type="date" style="background: white; background-color: white; color: black; border: white; text-align: center;"></label>
-
-              
-              <!--Columna 1-->
-              <label>Desayunos</label>
-              <div class="col-md-3">
-              <input class="campoCantidad" type="number" id="identificacion">
-
-                
-              </div>
-
-              <!--Columna 2-->
-              <div class="col-md-3">
-                <label><i class="bi bi-person-badge"></i><b> Nombre</b></label>
-                <input class="campoNuevoUsuario" type="text" id="nombre" /> <br /><br />
-
-                <label><i class="bi bi-pin-map"></i><b> Ciudad</b></label>
-                <input class="campoNuevoUsuario" type="text" id="ciudad" /> <br /><br />
-
-                <label><i class="bi bi-calendar3"></i><b> Fecha Creación</b></label>
-                <input class="campoNuevoUsuario" type="date" id="fech_creacion" /> <br /><br />
-              </div>
-
-              <!--Columna 3-->
-              <div class="col-md-3">
-                <label><i class="bi bi-person-badge"></i><b> Apellido</b></label>
-                <input class="campoNuevoUsuario" type="text" id="apellido" /> <br /><br />
-
-                <label><i class="bi bi-building-add"></i><b> Dirección</b></label>
-                <input class="campoNuevoUsuario" type="text" id="direccion" /> <br /><br />
-              </div>
-
-              <!--Columna 4-->
-              <div class="col-md-3">
-                <label><i class="bi bi-person-badge"></i><b> Apellido</b></label>
-                <input class="campoNuevoUsuario" type="text" id="apellido" /> <br /><br />
-
-                <label><i class="bi bi-building-add"></i><b> Dirección</b></label>
-                <input class="campoNuevoUsuario" type="text" id="direccion" /> <br /><br />
-              </div>
-
+    aria-labelledby="exampleModalLabel" aria-hidden="true"
+    style="font-family: 'Ubuntu Condensed', sans-serif; color: black;">
+    <div class="modal-dialog" style="max-width: 100%; max-height: 100%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-cart-check"
+                        style="font-size: 30px;"></i><b> Nuevo Registro Pedido</b>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </div>
-        </form>
-      </div>
+            <div class="modal-body">
 
-      <!--Botones de Cancelar y Guardar-->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="
+                <form action="" class="formulario" id="formulario">
+                    <div class="container">
+                        <div class="row">
+
+                            <label><b>Código Pedido</b> <input type="number" value="0001"
+                                    style="background: white; background-color: white; color: red; border: white;"></label>
+
+                            <label style="margin-left: 380px; margin-top: -25px;"><b>Mesa</b> <input type="number"
+                                    value="5"
+                                    style="background: white; background-color: white; color: red; border: white; width: 40px; text-align: center;"></label>
+
+                            <label style="margin-left: 760px; margin-top: -25px;"><b>Fecha Creación</b> <input
+                                    type="datetime-local"
+                                    style="background: white; background-color: white; color: black; border: white; text-align: center;"></label><br>
+
+                            <!--Columna 1-->
+                            <!--Lista de Desayunos-->
+                            <div class="col-md-4">
+                                <label class="titulosPedido"><b>Desayunos</b></label><br>
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Desayuno Colombiano</label>
+                                <label><b>$5.000</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Desayuno Americano</label>
+                                <label><b>$7.500</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Desayuno Montañero</label>
+                                <label><b>$10.000</b></label><br><br>
+
+                                <!--Lista de Almuerzos-->
+                                <label class="titulosPedido"><b>Almuerzos</b></label><br>
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Ajiaco con pollo</label>
+                                <label><b>$32.900</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Pollo alcaparrado</label>
+                                <label><b>$36.200</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Sancocho de gallina</label>
+                                <label><b>$36.200</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Cazuela de frijoles</label>
+                                <label><b>$31.800</b></label><br><br>
+
+                                <!--Lista de Adicionales-->
+                                <label class="titulosPedido"><b>Adicionales</b></label><br>
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Arroz</label>
+                                <label><b>$4.000</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Sopa</label>
+                                <label><b>$4.000</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Arepa</label>
+                                <label><b>$4.000</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Arepa con quesito</label>
+                                <label><b>$4.000</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Papas a la francesa</label>
+                                <label><b>$4.000</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Papas cocidas</label>
+                                <label><b>$4.000</b></label>
+                            </div>
+
+                            <!--Columna 2-->
+                            <!--Lista de Postres-->
+                            <div class="col-md-4">
+                                <label class="titulosPedido"><b>Postres</b></label><br>
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Postre de nata</label>
+                                <label><b>$15.300</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Brevas con arequipe</label>
+                                <label><b>$9.900</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Flan de leche asada</label>
+                                <label><b>$9.900</b></label><br><br>
+
+                                <!--Lista de Cafe-->
+                                <label class="titulosPedido"><b>Café</b></label><br>
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Expreso</label>
+                                <label><b>$5.400</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Expreso doble</label>
+                                <label><b>$6.000</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Capuchino</label>
+                                <label><b>$6.000</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Café latte</label>
+                                <label><b>$6.000</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Tinto</label>
+                                <label><b>$5.400</b></label><br><br>
+
+                                <!--Lista de Bebidas-->
+                                <label class="titulosPedido"><b>Bebidas</b></label><br>
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Jugos naturales en agua</label>
+                                <label><b>$8.700</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Jugos naturales en leche</label>
+                                <label><b>$9.000</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Limonada de coco</label>
+                                <label><b>$10.500</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Limonada de cereza</label>
+                                <label><b>$10.500</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Gaseosa</label>
+                                <label><b>$6.000</b></label><br><br>
+                            </div>
+
+                            <!--Columna 3-->
+                            <!--Lista de Bebidas Licores-->
+                            <div class="col-md-4">
+                                <label class="titulosPedido"><b>Bebidas (Licores)</b></label><br>
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Cerveza nacionales</label>
+                                <label><b>$8.800</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Cerveza importada</label>
+                                <label><b>$16.400</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Jarra de sangría</label>
+                                <label><b>$81.400</b></label><br>
+
+                                <input class="campoCantidad" type="number" id="identificacion"> <input
+                                    class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Canelazo</label>
+                                <label><b>$12.500</b></label><br><br>
+
+                                <!--Campo Nombre Cliente-->
+                                <label class="titulosPedido"><b>NOMBRE CLIENTE</b></label><br>
+                                <input type="text" name="nombreCliente" placeholder="Cliente"
+                                    class="campoNombreCliente"><br><br>
+
+                                <!--Campos de Forma de Pago-->
+                                <label class="titulosPedido"><b>Forma de pago</b></label><br>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Efectivo</label><br>
+
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Tarjeta Débito</label><br>
+
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Tarjera Crédito</label><br>
+
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    style="width: 20px; height: 20px;"> <label>Nequi</label><br><br>
+
+                                <!--Selección de Usuario-->
+                                <label class="titulosPedido"><b>Usuario</b></label><br>
+                                <div>
+                                    <select name="usuario" id="usuario"
+                                        style="border-radius: 5px; height: 30px; width: 200px; text-align: center;">
+                                        <option value="seleccionar">Seleccionar</option>
+                                        <option value="usuario1" style="text-align: justify">
+                                            Usuario 1
+                                        </option>
+                                        <option value="usuario2" style="text-align: justify">
+                                            Usuario 2
+                                        </option>
+                                        <option value="usuario3" style="text-align: justify">
+                                            Usuario 3
+                                        </option>
+                                        <option value="usuario4" style="text-align: justify">
+                                            Usuario 4
+                                        </option>
+                                    </select>
+                                </div><br>
+
+                                <!--Calculo de Totales-->
+                                <label><b>SubTotal</b></label> <label class="totalesCuenta" style="margin-left: 58px;">$
+                                    198.855</label><br>
+                                <label><b>IVA 19%</b></label> <label class="totalesCuenta" style="margin-left: 68px;">$
+                                    46.645</label><br>
+                                <label><b>Servicio (Propina)</b></label> <label class="totalesCuenta"
+                                    style="margin-left: 10px;">$ 10.000</label><br>
+                                <label><b>Total</b></label> <label class="totalesCuenta" style="margin-left: 80px;">$
+                                    255.500</label><br>
+
+                                <!--Estado Pedido-->
+                                <input class="campoNuevoUsuario" type="text" id="estado_text" value="ACTIVO"
+                                    style="background: white; background-color: white; color: black; border: white;"
+                                    disabled>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--Botones de Cancelar y Guardar-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="
               background-color: #e74c3c;
               text-align: center;
               border-color: #e74c3c;
               color: black;
             " onclick="cancelar()">
-          <i class="bi bi-trash"></i><b> Cancelar</b>
-        </button>
+                    <i class="bi bi-trash"></i><b> Cancelar</b>
+                </button>
 
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="
               background-color: #abebc6;
               text-align: center;
               border-color: #abebc6;
               color: black;" onclick="agregar()">
-          <i class="bi bi-folder-check"></i><b> Guardar</b>
-        </button>
+                    <i class="bi bi-folder-check"></i><b> Guardar</b>
+                </button>
 
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!--Conexión de Bootstrap-->

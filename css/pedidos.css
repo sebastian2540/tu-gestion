@@ -48,5 +48,37 @@ tr:nth-child(even) {
 }
 
 .campoCantidad{
-    width: 45px;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    border-radius: 4px;
+}
+
+.titulosPedido{
+    color: #ff6804d3;
+}
+
+.nombreCliente{
+    color: black;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.campoNombreCliente{
+    border-radius: 5px;
+    width: 300px;
+    border-color: transparent;
+    color: red;
+}
+
+.totalesCuenta{
+    color: red;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.reportePedidos{
+    margin-left: 1145px;
+    margin-top: 40px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 18px;
 }
