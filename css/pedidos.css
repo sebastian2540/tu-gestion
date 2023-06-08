@@ -46,3 +46,7 @@ tr:nth-child(even) {
 .campoNuevoUsuario{
     border-radius: 5px;
 }
+
+.campoCantidad{
+    width: 45px;
+}
